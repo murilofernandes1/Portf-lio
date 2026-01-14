@@ -3,32 +3,38 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 24px 32px;
 }
 
 .navbar {
   display: flex;
-  gap: 24px;
+  gap: 20px;
 }
 
 .name {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: opacity 0.15s ease;
+}
+
+.name:hover {
+  opacity: 0.75;
 }
 
 .divisor {
   width: 100%;
   height: 1px;
   background-color: var(--foreground);
-  opacity: 0.03;
-  margin-top: 15px;
+  opacity: 0.04;
 }
 
 .icon {
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.75;
+  transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
 .icon:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
+  transform: translateY(-2px) scale(1.05);
+  opacity: 1;
 }

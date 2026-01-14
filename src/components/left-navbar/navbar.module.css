@@ -9,26 +9,33 @@
   padding: 42px 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
 }
 
 .page {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 28px;
   font-weight: 500;
-  padding: 7px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .page:hover {
   color: var(--text-primary);
+  background-color: rgba(128, 128, 128, 0.15);
   cursor: pointer;
-  background-color: grey;
-  border-radius: 10px;
+}
+
+.active {
+  color: var(--text-primary);
+  background-color: rgba(128, 128, 128, 0.22);
+  font-weight: 600;
 }
 
 .divisor {
   width: 1px;
   background-color: var(--foreground);
   opacity: 0.03;
-  margin-left: 15px;
+  margin-left: 18px;
 }
