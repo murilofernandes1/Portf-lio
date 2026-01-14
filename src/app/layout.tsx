@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header/header";
+import NavBar from "@/components/left-navbar/navbar";
 
 const interMono = Inter({
-  variable: "--font-inter-mono",
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -17,8 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${interMono.variable}`}>{children}</body>
+    <html lang="pt-br">
+      <body className={`${interMono.variable}`}>
+        <Header />
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }
