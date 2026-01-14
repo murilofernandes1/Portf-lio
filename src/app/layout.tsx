@@ -22,10 +22,16 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${interMono.variable}`}>
-        <Header />
-        <NavBar />
-        {children}
-        <Footer />
+        <div className="page">
+          <Header />
+
+          <div className="body">
+            <NavBar />
+            <main className="content">{children}</main>
+          </div>
+
+          <Footer />
+        </div>
       </body>
     </html>
   );
