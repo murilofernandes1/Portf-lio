@@ -1,0 +1,165 @@
+.main {
+  padding: 64px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 120px);
+  transform: translateY(-20px);
+}
+
+.layout {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+  max-width: 1200px;
+}
+
+.info {
+  max-width: 560px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bigname,
+.role,
+.description,
+.techs,
+.actions,
+.carousel {
+  opacity: 0;
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.bigname {
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--text-primary);
+  animation-delay: 0s;
+}
+
+.role {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  animation-delay: 0.08s;
+}
+
+.description {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.72);
+  animation-delay: 0.16s;
+}
+
+.techs {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+  animation-delay: 0.24s;
+}
+
+.techs img {
+  width: 26px;
+  height: 26px;
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.techs img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  animation-delay: 0.32s;
+}
+
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #1f1f1f;
+  transition: background 0.2s ease;
+}
+
+.actionButton:hover {
+  background: #1a1a1a;
+}
+
+.carousel {
+  position: relative;
+  flex-shrink: 0;
+  width: 360px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(110deg, #1a1a1a 30%, #242424 45%, #1a1a1a 60%);
+  border-radius: 16px;
+  border: 1px solid #1f1f1f;
+}
+
+.nav {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.55);
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav:first-of-type {
+  left: -14px;
+}
+
+.nav:last-of-type {
+  right: -14px;
+}
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #9ca3af;
+  font-size: 14px;
+  margin-bottom: 24px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.back:hover {
+  color: #fff;
+  transform: translateX(-2px);
+}
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .carousel {
+    margin-left: 0;
+  }
+}
