@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/header";
-import NavBar from "@/components/left-navbar/navbar";
 import Footer from "@/components/footer/footer";
 
 const interMono = Inter({
@@ -26,7 +25,7 @@ export default function RootLayout({
           <Header />
 
           <div className="body">
-            <NavBar />
+            {/* <NavBar /> */}
             <div className="content">{children}</div>
           </div>
 

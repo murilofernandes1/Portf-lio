@@ -86,3 +86,78 @@
   font-size: 13px;
   color: rgba(255, 255, 255, 0.45);
 }
+@media (max-width: 768px) {
+  .main {
+    padding: 48px 24px;
+    transform: translateY(-10px);
+  }
+
+  .bigname {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .role {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .cardDescription {
+    font-size: 14px;
+  }
+
+  .cardStack {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 32px 16px;
+  }
+
+  .bigname {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .role {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .cardTitle {
+    font-size: 16px;
+  }
+
+  .cardDescription {
+    font-size: 13px;
+  }
+
+  .cardStack {
+    font-size: 11px;
+  }
+}
