@@ -2,13 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import {
-  Github,
-  ExternalLink,
-  ChevronLeft,
-  ChevronRight,
-  ArrowLeft,
-} from "lucide-react";
+import { Github, ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import styles from "./page.module.css";
 
@@ -42,10 +36,7 @@ export default function OrbitBank() {
           </p>
 
           <div className={styles.techs}>
-            <img
-              alt=""
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-            />
+            <img alt="" src="https://www.svgrepo.com/show/374035/reactts.svg" />
             <img
               alt=""
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
