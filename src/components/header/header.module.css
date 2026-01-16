@@ -9,13 +9,19 @@
 .navbar {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
-
+.initial-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
 .name {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 0.02em;
   transition: opacity 0.15s ease;
+  margin: 0;
 }
 
 .name:hover {
@@ -30,11 +36,37 @@
 }
 
 .icon {
+  width: 30px;
+  height: 30px;
   opacity: 0.75;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
 }
 
 .icon:hover {
   transform: translateY(-2px) scale(1.05);
   opacity: 1;
+}
+.nav {
+  background: none;
+  border: none;
+}
+
+.nav:hover {
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+  .initial-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .name {
+    font-size: 22px;
+  }
 }
