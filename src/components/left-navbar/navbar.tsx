@@ -29,15 +29,6 @@ export default function NavBar() {
         </Link>
 
         <Link
-          href="/education"
-          className={`${styles.page} ${
-            pathname === "/education" ? styles.active : ""
-          }`}
-        >
-          Educação
-        </Link>
-
-        <Link
           href="/contact"
           className={`${styles.page} ${
             pathname === "/contact" ? styles.active : ""

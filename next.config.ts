@@ -6,6 +6,13 @@ const nextConfig: NextConfig = {
     "https://murilofernandes.dev",
     "http://192.168.3.108:3000",
   ],
+  images: {
+    remotePatterns: [
+      { hostname: "cdn.jsdelivr.net" },
+      { hostname: "cdn.simpleicons.org" },
+      { hostname: "raw.githubusercontent.com" },
+    ],
+  },
 };
 
 export default nextConfig;
