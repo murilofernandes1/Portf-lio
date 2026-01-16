@@ -39,3 +39,8 @@
   opacity: 0.03;
   margin-left: 18px;
 }
+@media (max-width: 900px) {
+  .container {
+    display: none;
+  }
+}
