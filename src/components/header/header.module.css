@@ -70,3 +70,8 @@
     font-size: 22px;
   }
 }
+@media (min-width: 900px) {
+  .nav {
+    display: none;
+  }
+}
