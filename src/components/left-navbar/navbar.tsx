@@ -25,7 +25,7 @@ export default function NavBar() {
             pathname === "/technologies" ? styles.active : ""
           }`}
         >
-          Tecnologias e Ferramentas
+          Tecnologias
         </Link>
 
         <Link

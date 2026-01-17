@@ -17,7 +17,7 @@ export default function Header() {
             <Menu className={styles.icon} />
           </button>
           <Link href="/" scroll className={styles.name}>
-            MFV
+            MURIDEV
           </Link>
         </div>
 
@@ -35,6 +35,7 @@ export default function Header() {
           </Link>
         </div>
       </div>
+      <div className={styles.divisor} />
     </>
   );
 }
