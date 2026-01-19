@@ -38,8 +38,8 @@ export default function Cinemao() {
           <p className={styles.description}>
             Aplicação web de um cinema fictício com landing page de filmes em
             cartaz, sinopse e tempo de filme, horários e agendamento de sessões,
-            consulta e escolha de assentos disponíveis e dashboard adminstrativa
-            para gestão do site.
+            consulta e escolha de assentos disponíveis e dashboard
+            administrativa para gestão do site.
           </p>
 
           <div className={styles.techs}>

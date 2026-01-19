@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     "http://localhost:3000",
     "https://murilofernandes.dev",
     "http://192.168.3.108:3000",
+    "192.168.3.108/",
   ],
   images: {
     remotePatterns: [

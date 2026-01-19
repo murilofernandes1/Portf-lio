@@ -10,7 +10,6 @@ export default function Home() {
         <br />
         <span className={styles.highlight}>Do Mobile ao Desktop.</span>
         <br />
-        Arquitetura, performance e detalhe em cada linha.
       </h3>
     </main>
   );
