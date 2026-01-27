@@ -10,7 +10,10 @@ export default function NavBar() {
   return (
     <div className={styles.container}>
       <div className={styles.navbar}>
-        <Link href="/" scroll className={styles.name}>
+        <Link
+          href="/"
+          className={`${styles.page} ${pathname === "/" ? styles.active : ""}`}
+        >
           Home
         </Link>
         <Link

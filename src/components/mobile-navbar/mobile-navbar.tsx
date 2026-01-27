@@ -24,6 +24,13 @@ export default function MobileNavbar({
       <nav className={`${styles.container} ${navOpen ? styles.open : ""}`}>
         <div className={styles.navbar}>
           <Link
+            href="/"
+            className={`${styles.page} ${pathname === "/home" ? styles.active : ""}`}
+            onClick={() => setNavOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
             href="/projects"
             className={`${styles.page} ${pathname === "/projects" ? styles.active : ""}`}
             onClick={() => setNavOpen(false)}

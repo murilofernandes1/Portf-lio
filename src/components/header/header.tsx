@@ -16,6 +16,11 @@ export default function Header() {
           <button className={styles.nav} onClick={() => setNavOpen(!navOpen)}>
             <Menu className={styles.icon} />
           </button>
+          <Link href={"/"}>
+            <div className={styles.glass}>
+              <p className={styles.glassText}>&lt;muri.dev /&gt;</p>
+            </div>
+          </Link>
         </div>
 
         {navOpen && <MobileNavbar navOpen={navOpen} setNavOpen={setNavOpen} />}
