@@ -1,11 +1,10 @@
 .main {
-  padding: clamp(48px, 8vw, 80px) clamp(24px, 6vw, 56px);
+  padding: 64px 32px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
   min-height: calc(100vh - 120px);
-  gap: clamp(12px, 2vw, 20px);
+  transform: translateY(-20px);
 }
 
 @keyframes fadeUp {
@@ -61,7 +60,7 @@
   line-height: 1.75;
   color: rgba(255, 255, 255, 0.75);
   letter-spacing: 0.3px;
-  margin: 0;
+  margin-top: 20px;
   animation-delay: 0.16s;
 }
 

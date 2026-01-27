@@ -9,7 +9,6 @@ export default function Home() {
         Transformo ideias em aplicações sólidas e modernas
         <br />
         <span className={styles.highlight}>Do Mobile ao Desktop.</span>
-        <br />
       </h3>
     </main>
   );

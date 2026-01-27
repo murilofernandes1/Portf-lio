@@ -60,7 +60,9 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  transition: transform 0.25s ease, background 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
 }
 
 .card:hover {
