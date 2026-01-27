@@ -18,7 +18,7 @@ export default function Header() {
           </button>
           <Link href={"/"}>
             <div className={styles.glass}>
-              <p className={styles.glassText}>&lt;muri.dev /&gt;</p>
+              <p className={styles.glassText}>&lt;mfv/&gt;</p>
             </div>
           </Link>
         </div>
