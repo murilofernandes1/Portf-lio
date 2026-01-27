@@ -105,6 +105,7 @@
   .main {
     padding: clamp(40px, 10vw, 64px) 24px;
     gap: 14px;
+    justify-content: center;
   }
 
   .bigname {
@@ -114,7 +115,6 @@
 
   .role {
     font-size: 19px;
-    margin-bottom: 10px;
   }
 
   .message {
@@ -144,7 +144,6 @@
 
   .role {
     font-size: 17px;
-    margin-bottom: 8px;
   }
 
   .message {

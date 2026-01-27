@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Silk from "../components/Silk";
 import "./globals.css";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
@@ -11,7 +12,7 @@ const interMono = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Murilo Fernandes Vaz",
+  title: "<mfv/>",
 };
 
 export default function RootLayout({
@@ -21,15 +22,33 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${interMono.variable}`}>
-        <div className="page">
+      <body className={`${interMono.variable} antialiased relative`}>
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            zIndex: -1,
+            pointerEvents: "none",
+          }}
+        >
+          <Silk
+            speed={0.4}
+            scale={0.2}
+            color="#4c4a4c"
+            noiseIntensity={1.8}
+            rotation={0}
+          />
+        </div>
+
+        <div className="relative z-10 min-h-screen flex flex-col animate-in fade-in duration-1000">
           <Header />
-
-          <div className="body">
+          <div className="flex flex-1">
             <NavBar />
-            <div className="content">{children}</div>
+            <main className="flex-1">{children}</main>
           </div>
-
           <Footer />
         </div>
       </body>
