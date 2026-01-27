@@ -10,6 +10,9 @@ export default function NavBar() {
   return (
     <div className={styles.container}>
       <div className={styles.navbar}>
+        <Link href="/" scroll className={styles.name}>
+          Home
+        </Link>
         <Link
           href="/projects"
           className={`${styles.page} ${

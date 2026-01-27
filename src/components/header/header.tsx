@@ -16,9 +16,6 @@ export default function Header() {
           <button className={styles.nav} onClick={() => setNavOpen(!navOpen)}>
             <Menu className={styles.icon} />
           </button>
-          <Link href="/" scroll className={styles.name}>
-            MURIDEV
-          </Link>
         </div>
 
         {navOpen && <MobileNavbar navOpen={navOpen} setNavOpen={setNavOpen} />}
