@@ -78,7 +78,7 @@
 }
 
 .message {
-  max-width: 580px;
+  width: 100%;
   font-size: clamp(17px, 3vw, 20px);
   font-weight: 400;
   line-height: 1.5;
@@ -87,15 +87,13 @@
   animation-delay: 0.3s;
 }
 
-.highlight,
-.highlightMobile {
+.highlight {
   position: relative;
   color: #fff;
   font-weight: 600;
 }
 
-.highlight::after,
-.highlightMobile::after {
+.highlight::after {
   content: "";
   position: absolute;
   left: 0;
@@ -108,12 +106,6 @@
   animation-delay: 0.8s;
 }
 
-@media (min-width: 769px) {
-  .highlightMobile {
-    display: none;
-  }
-}
-
 @media (max-width: 768px) {
   .main {
     padding: 0 24px;
@@ -124,10 +116,6 @@
   .message {
     margin-top: 32px;
     max-width: 100%;
-  }
-
-  .highlight {
-    display: none;
   }
 }
 
