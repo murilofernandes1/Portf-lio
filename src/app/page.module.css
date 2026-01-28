@@ -1,26 +1,27 @@
 .main {
-  padding: 64px 32px;
+  padding: 0 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: calc(100vh - 120px);
-  transform: translateY(-20px);
+  min-height: 85vh;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
 }
 
 .main::before {
   content: "";
   position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 300px;
-  height: 300px;
+  top: 15%;
+  left: -5%;
+  width: 350px;
+  height: 350px;
   background: radial-gradient(
     circle,
-    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.06) 0%,
     transparent 70%
   );
-  filter: blur(60px);
+  filter: blur(80px);
   z-index: -1;
   pointer-events: none;
 }
@@ -28,7 +29,7 @@
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -48,28 +49,28 @@
 .hero,
 .message {
   opacity: 0;
-  animation: fadeUp 0.8s ease-out forwards;
+  animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  animation-delay: 0s;
+  gap: 8px;
+  animation-delay: 0.1s;
 }
 
 .bigname {
   font-family: var(--font-inter), sans-serif;
-  font-size: clamp(40px, 8.5vw, 72px);
+  font-size: clamp(42px, 10vw, 84px);
   font-weight: 900;
-  line-height: 1;
+  line-height: 0.9;
   letter-spacing: -0.06em;
   display: block;
 }
 
 .role {
   font-family: var(--font-inter), sans-serif;
-  font-size: clamp(24px, 5.2vw, 44px);
+  font-size: clamp(26px, 6vw, 48px);
   font-weight: 900;
   line-height: 1;
   letter-spacing: -0.06em;
@@ -77,25 +78,23 @@
 }
 
 .message {
-  max-width: 600px;
-  font-size: clamp(16px, 2.2vw, 19px);
+  max-width: 580px;
+  font-size: clamp(17px, 3vw, 20px);
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.5);
-  margin-top: 32px;
-  animation-delay: 0.2s;
+  margin-top: 40px;
+  animation-delay: 0.3s;
 }
 
-.highlight {
-  position: relative;
-  color: #fff;
-  font-weight: 600;
-}
+.highlight,
 .highlightMobile {
   position: relative;
   color: #fff;
   font-weight: 600;
 }
+
+.highlight::after,
 .highlightMobile::after {
   content: "";
   position: absolute;
@@ -106,22 +105,10 @@
   background: linear-gradient(90deg, transparent, #fff, transparent);
   transform-origin: left;
   animation: underlineIn 0.8s ease-out forwards;
-  animation-delay: 0.6s;
-}
-.highlight::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #fff, transparent);
-  transform-origin: left;
-  animation: underlineIn 0.8s ease-out forwards;
-  animation-delay: 0.6s;
+  animation-delay: 0.8s;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 769px) {
   .highlightMobile {
     display: none;
   }
@@ -129,14 +116,16 @@
 
 @media (max-width: 768px) {
   .main {
-    padding: 48px 24px;
-    justify-content: flex-start;
-    transform: translateY(0);
+    padding: 0 24px;
+    justify-content: center;
+    min-height: 80vh;
   }
 
   .message {
-    margin-top: 24px;
+    margin-top: 32px;
+    max-width: 100%;
   }
+
   .highlight {
     display: none;
   }
@@ -144,14 +133,19 @@
 
 @media (max-width: 480px) {
   .main {
-    padding: 40px 20px;
+    padding: 0 20px;
   }
 
   .bigname {
-    font-size: 38px;
+    font-size: 40px;
   }
 
   .role {
-    font-size: 24px;
+    font-size: 26px;
+  }
+
+  .message {
+    font-size: 18px;
+    line-height: 1.4;
   }
 }
