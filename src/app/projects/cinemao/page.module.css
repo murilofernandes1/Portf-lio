@@ -27,7 +27,7 @@
 .layout {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
+  align-items: flex-start;
   gap: 80px;
 }
 
@@ -65,6 +65,7 @@
   line-height: 1;
   letter-spacing: -0.05em;
   color: #fff;
+  margin: 0;
 }
 
 .description {
@@ -132,6 +133,7 @@
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  margin-top: 0;
 }
 
 .image {
@@ -150,12 +152,9 @@
   .layout {
     grid-template-columns: 1fr;
     gap: 60px;
+    align-items: stretch;
   }
-
-  .info {
-    max-width: 100%;
-  }
-
+  .info,
   .carousel {
     max-width: 100%;
   }
@@ -165,11 +164,9 @@
   .main {
     padding: 40px 20px;
   }
-
   .actions {
     flex-direction: column;
   }
-
   .actionButton {
     justify-content: center;
   }

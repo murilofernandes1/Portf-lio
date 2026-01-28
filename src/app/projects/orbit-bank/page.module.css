@@ -19,26 +19,17 @@
   transition: all 0.2s ease;
 }
 
+.back:hover {
+  color: #fff;
+  transform: translateX(-4px);
+}
+
 .layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: flex-start;
   gap: 80px;
   margin-top: 0;
-}
-
-.bigname {
-  font-size: clamp(32px, 5vw, 56px);
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.05em;
-  color: #fff;
-  margin-top: 0;
-}
-
-.back:hover {
-  color: #fff;
-  transform: translateX(-4px);
 }
 
 @keyframes fadeUp {
@@ -72,9 +63,10 @@
 .bigname {
   font-size: clamp(32px, 5vw, 56px);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1;
   letter-spacing: -0.05em;
   color: #fff;
+  margin: 0;
 }
 
 .description {
@@ -134,6 +126,7 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .placeholder {
@@ -146,6 +139,7 @@
   background: #000;
   border: 6px solid #1a1a1a;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  margin-top: 0;
 }
 
 .image {

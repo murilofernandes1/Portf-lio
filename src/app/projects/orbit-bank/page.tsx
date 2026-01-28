@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { Github, ArrowLeft } from "lucide-react";
+import { Github, ArrowLeft, Download } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
@@ -18,11 +18,15 @@ export default function OrbitBank() {
           <h1 className={styles.bigname}>Orbit Bank</h1>
 
           <p className={styles.description}>
-            Banco digital fictício desenvolvido com API própria, foco em
-            separação de responsabilidades, escalabilidade e experiência do
-            usuário. O projeto teve como foco utilizar o máximo de
-            funcionalidades do React Native, como biometria e vibrações nativas
-            do dispositivo.
+            App mobile que simula um banco digital. Dentro das features do
+            projeto constam transferência de valores fictícios entre usuários
+            via chave PIX ou geração ou leitura de QR Code, reservas para
+            guardar esses valores cartão virtual animado para simular NFT,
+            extrato de transferências e pagamento com cartão de crédito com
+            limite e faturas funcionais. O aplicativo também conta com
+            funcionalidades nativas como autenticação segura para o contexto
+            bancário via biometria do dispositivo e vibração para um melhor
+            feedback e experiência do usuário.
           </p>
 
           <div className={styles.techs}>
@@ -49,6 +53,14 @@ export default function OrbitBank() {
             >
               <Github size={18} />
               Repositório
+            </a>
+            <a
+              className={styles.actionButton}
+              href=" https://drive.google.com/file/d/1swjz98cfYixyead5xXFhSlJaRCu9Hk73/view?usp=drive_link"
+              target="_blank"
+            >
+              <Download size={18} />
+              Instalar app (Android)
             </a>
           </div>
         </section>
