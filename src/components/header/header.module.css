@@ -3,69 +3,98 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 32px;
+  padding: 20px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.1);
 }
 
-.navbar {
+.leftSection {
   display: flex;
-  gap: 20px;
   align-items: center;
+  gap: 16px;
 }
-.initial-icons {
+
+.navToggle {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   display: flex;
-  gap: 12px;
   align-items: center;
-}
-.name {
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  transition: opacity 0.15s ease;
-  margin: 0;
-}
-
-.name:hover {
-  opacity: 0.75;
-}
-
-.icon {
-  width: 30px;
-  height: 30px;
-  opacity: 0.75;
-  transition:
-    transform 0.15s ease,
-    opacity 0.15s ease;
-}
-
-.icon:hover {
-  transform: translateY(-2px) scale(1.05);
-  opacity: 1;
-}
-.nav {
-  background: none;
-  border: none;
-}
-
-.nav:hover {
+  justify-content: center;
   cursor: pointer;
+  z-index: 1001;
+  transition: all 0.2s ease;
 }
 
-@media (max-width: 900px) {
-  .icon {
-    width: 25px;
-    height: 25px;
-  }
-  .initial-icons {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-  }
-  .name {
-    font-size: 22px;
-  }
+.navToggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
-@media (min-width: 900px) {
-  .nav {
+
+.navToggle.active {
+  background: #fff;
+  border-color: #fff;
+  color: #000;
+}
+
+.logoWrapper {
+  text-decoration: none;
+  z-index: 1001;
+}
+
+.logoBox {
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.logoText {
+  color: #fff;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.logoBracket {
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 16px;
+}
+
+.iconLink {
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease;
+}
+
+.iconLink:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.divisor {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent
+  );
+}
+
+@media (min-width: 901px) {
+  .navToggle {
     display: none;
   }
 }

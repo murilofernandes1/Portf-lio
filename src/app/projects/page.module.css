@@ -26,19 +26,22 @@
 }
 
 .bigname {
+  font-family: var(--font-inter), sans-serif;
   font-size: 52px;
-  font-weight: 700;
-  line-height: 60px;
-  letter-spacing: -0.5px;
-  color: var(--text-primary);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: #fff;
   margin-bottom: 10px;
   animation-delay: 0s;
 }
 
 .role {
+  font-family: var(--font-inter), sans-serif;
   font-size: 20px;
-  font-weight: 500;
-  color: var(--text-secondary);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 32px;
   animation-delay: 0.12s;
 }
@@ -72,31 +75,40 @@
 }
 
 .cardTitle {
+  font-family: var(--font-inter), sans-serif;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   color: #fff;
 }
 
 .cardDescription {
+  font-family: var(--font-inter), sans-serif;
   font-size: 15px;
+  font-weight: 400;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.72);
 }
 
 .cardStack {
+  font-family: var(--font-inter), sans-serif;
   margin-top: auto;
   font-size: 13px;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.45);
 }
+
 @media (max-width: 768px) {
   .main {
     padding: 48px 24px;
     transform: translateY(-10px);
+    align-items: flex-start;
+    text-align: left;
   }
 
   .bigname {
     font-size: 40px;
-    line-height: 48px;
+    line-height: 1.1;
   }
 
   .role {
@@ -134,7 +146,6 @@
 
   .bigname {
     font-size: 32px;
-    line-height: 40px;
   }
 
   .role {

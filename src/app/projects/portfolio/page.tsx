@@ -60,10 +60,10 @@ export default function Portfolio() {
               Repositório
             </a>
 
-            {/* <a className={styles.actionButton} href="#" target="_blank">
+            <a className={styles.actionButton} href="/" target="_blank">
               <ExternalLink size={18} />
               Deploy
-            </a> */}
+            </a>
           </div>
         </section>
 

@@ -9,36 +9,48 @@
   padding: 42px 0;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
+  width: 200px;
 }
 
 .page {
-  font-size: 17px;
-  line-height: 28px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 15px;
+  letter-spacing: -0.01em;
   font-weight: 500;
-  padding: 8px 10px;
-  border-radius: 10px;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
 }
 
 .page:hover {
-  color: var(--text-primary);
-  background-color: rgba(128, 128, 128, 0.15);
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.08);
   cursor: pointer;
+  transform: translateX(4px);
 }
 
 .active {
-  color: var(--text-primary);
-  background-color: rgba(128, 128, 128, 0.22);
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.12);
   font-weight: 600;
 }
 
 .divisor {
   width: 1px;
-  background-color: var(--foreground);
-  opacity: 0.03;
-  margin-left: 18px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.1) 10%,
+    rgba(255, 255, 255, 0.1) 90%,
+    transparent
+  );
+  margin-left: 24px;
 }
+
 @media (max-width: 900px) {
   .container {
     display: none;

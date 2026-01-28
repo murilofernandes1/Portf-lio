@@ -1,5 +1,4 @@
 "use client";
-
 import styles from "./mobile-navbar.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -15,6 +14,14 @@ export default function MobileNavbar({
 }: MobileNavbarProps) {
   const pathname = usePathname();
 
+  const menuLinks = [
+    { name: "Home", path: "/" },
+    { name: "Projetos", path: "/projects" },
+    { name: "Tecnologias", path: "/technologies" },
+    { name: "Sobre mim", path: "/about" },
+    { name: "Contato", path: "/contact" },
+  ];
+
   return (
     <>
       <div
@@ -23,41 +30,16 @@ export default function MobileNavbar({
       />
       <nav className={`${styles.container} ${navOpen ? styles.open : ""}`}>
         <div className={styles.navbar}>
-          <Link
-            href="/"
-            className={`${styles.page} ${pathname === "/home" ? styles.active : ""}`}
-            onClick={() => setNavOpen(false)}
-          >
-            Home
-          </Link>
-          <Link
-            href="/projects"
-            className={`${styles.page} ${pathname === "/projects" ? styles.active : ""}`}
-            onClick={() => setNavOpen(false)}
-          >
-            Projetos
-          </Link>
-          <Link
-            href="/technologies"
-            className={`${styles.page} ${pathname === "/technologies" ? styles.active : ""}`}
-            onClick={() => setNavOpen(false)}
-          >
-            Tecnologias
-          </Link>
-          <Link
-            href="/contact"
-            className={`${styles.page} ${pathname === "/contact" ? styles.active : ""}`}
-            onClick={() => setNavOpen(false)}
-          >
-            Contato
-          </Link>
-          <Link
-            href="/about"
-            className={`${styles.page} ${pathname === "/about" ? styles.active : ""}`}
-            onClick={() => setNavOpen(false)}
-          >
-            Sobre mim
-          </Link>
+          {menuLinks.map((link) => (
+            <Link
+              key={link.path}
+              href={link.path}
+              className={`${styles.page} ${pathname === link.path ? styles.active : ""}`}
+              onClick={() => setNavOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
       </nav>
     </>

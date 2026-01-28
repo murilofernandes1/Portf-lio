@@ -6,7 +6,7 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import NavBar from "@/components/left-navbar/navbar";
 
-const interMono = Inter({
+const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
-      <body className={`${interMono.variable} antialiased relative`}>
+    <html lang="pt-br" className={inter.variable}>
+      <body className={`${inter.variable} antialiased relative`}>
         <div
           style={{
             position: "fixed",

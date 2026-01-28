@@ -2,14 +2,15 @@
   padding: 64px 32px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   min-height: calc(100vh - 120px);
-  gap: 24px;
+  transform: translateY(-20px);
 }
 
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(6px);
   }
   to {
     opacity: 1;
@@ -17,92 +18,125 @@
   }
 }
 
-.bigname {
-  font-size: 52px;
-  font-weight: 700;
-  line-height: 60px;
-  letter-spacing: -0.5px;
-  color: var(--text-primary);
+.bigname,
+.intro,
+.grid {
   opacity: 0;
   animation: fadeUp 0.6s ease-out forwards;
 }
 
-.role {
+.bigname {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  color: #fff;
+  margin-bottom: 20px;
+  animation-delay: 0s;
+}
+
+.intro {
+  font-family: var(--font-inter), sans-serif;
   font-size: 20px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--text-secondary);
-  max-width: 720px;
-  opacity: 0;
-  animation: fadeUp 0.6s ease-out forwards;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 40px;
   animation-delay: 0.12s;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
-  margin-top: 32px;
-  opacity: 0;
-  animation: fadeUp 0.6s ease-out forwards;
-  animation-delay: 0.22s;
+  max-width: 960px;
+  animation-delay: 0.28s;
 }
 
 .card {
-  position: relative;
   padding: 24px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
   transition:
     transform 0.25s ease,
-    background 0.25s ease;
+    background 0.25s ease,
+    border 0.25s ease;
 }
-.externalIcon {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 16px;
-  height: 16px;
-  opacity: 0.5;
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
-}
+
 .card:hover {
   transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
-.externalIcon:hover {
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.external {
+  opacity: 0.6;
+  transition: all 0.25s ease;
+}
+
+.card:hover .external {
+  transform: translate(3px, -3px);
   opacity: 1;
-  transform: scale(1.1);
+  color: #fff;
 }
 
 .card h3 {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 12px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
 }
 
 .card p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--text-secondary);
+  font-family: var(--font-inter), sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.highlight {
+  font-family: var(--font-inter), sans-serif;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
   .main {
     padding: 48px 24px;
+    transform: translateY(-10px);
+    align-items: flex-start;
+    text-align: left;
   }
 
   .bigname {
     font-size: 40px;
-    line-height: 48px;
+    line-height: 1.1;
   }
 
-  .role {
+  .intro {
     font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 
@@ -113,14 +147,10 @@
 
   .bigname {
     font-size: 32px;
-    line-height: 40px;
   }
 
-  .role {
+  .intro {
     font-size: 16px;
-  }
-
-  .grid {
-    gap: 16px;
+    margin-bottom: 24px;
   }
 }

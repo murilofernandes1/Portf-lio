@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 html,
 body {
   overflow-x: hidden;
@@ -14,19 +12,17 @@ body {
     var(--font-inter),
     system-ui,
     -apple-system,
-    BlinkMacSystemFont,
-    Arial,
     sans-serif;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv02", "cv03", "cv04", "ss01";
+  text-rendering: optimizeLegibility;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-
   user-select: none;
   -webkit-user-select: none;
   -webkit-tap-highlight-color: transparent;
@@ -43,6 +39,13 @@ h6,
 input,
 textarea {
   user-select: text;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.04em;
+  line-height: 1.1;
 }
 
 a {
