@@ -25,7 +25,8 @@ export default function Home() {
       </div>
 
       <p className={styles.message}>
-        Transformo ideias em aplicações sólidas e modernas
+        Transformo ideias em aplicações sólidas e modernas.{" "}
+        <span className={styles.highlightMobile}>Do Mobile ao Desktop.</span>
         <br />
         <span className={styles.highlight}>Do Mobile ao Desktop.</span>
       </p>
