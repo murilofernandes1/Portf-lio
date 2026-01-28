@@ -15,7 +15,9 @@ export default function About() {
             Análise e Desenvolvimento de Sistemas na UniAnchieta. Sempre fui
             apaixonado por tecnologia e encontrei no desenvolvimento uma forma
             de transformar ideias minhas e de outras pessoas em soluções reais
-            (nesse caso, digitais).
+            (nesse caso, digitais). No momento estou buscando minha primeira
+            oportunidade profissional, enquanto me especializo ainda mais
+            tecnicamente.
           </p>
         </div>
 
@@ -38,8 +40,9 @@ export default function About() {
 
           <h3>Meu currículo</h3>
           <p>
-            Um resumo direto do que eu faço, como penso e do tipo de projeto que
-            eu consigo entregar.
+            No meu currículo você pode saber mais detalhes técnicos sobre mim,
+            projetos, educação, experiência e como posso agregar a qualquer
+            empresa e projeto.
           </p>
         </Link>
       </div>
