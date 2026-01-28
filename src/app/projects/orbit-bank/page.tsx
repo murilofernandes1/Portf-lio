@@ -3,6 +3,7 @@
 
 import { Github, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function OrbitBank() {
@@ -52,18 +53,18 @@ export default function OrbitBank() {
           </div>
         </section>
 
-        {/* <aside className={styles.carousel}>
+        <aside className={styles.carousel}>
           <div className={styles.placeholder}>
             <Image
               width={1200}
               height={800}
               className={styles.image}
-              src="/cinemao-pic.png"
-              alt="cinemao-pic"
+              src="/orbit-pic.png"
+              alt="orbit-pic"
               priority
             />
           </div>
-        </aside> */}
+        </aside>
       </div>
     </main>
   );
