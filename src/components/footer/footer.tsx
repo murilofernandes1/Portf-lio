@@ -5,9 +5,10 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.divisor} />
       <div className={styles.container}>
-        <span className={styles.name}>
-          © {new Date().getFullYear()} • Desenvolvido por Murilo Fernandes Vaz
-        </span>
+        <p className={styles.name}>
+          © {new Date().getFullYear()} <span className={styles.dot}>•</span>{" "}
+          Murilo Fernandes Vaz
+        </p>
       </div>
     </footer>
   );
