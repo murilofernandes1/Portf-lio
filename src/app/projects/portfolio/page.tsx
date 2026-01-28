@@ -1,25 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useState } from "react";
-import { Github, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
 import { ArrowLeft } from "lucide-react";
 
-const placeholders = [0, 1, 2];
-
 export default function Portfolio() {
-  const [index, setIndex] = useState(0);
-
-  function prev() {
-    setIndex((i) => (i === 0 ? placeholders.length - 1 : i - 1));
-  }
-
-  function next() {
-    setIndex((i) => (i === placeholders.length - 1 ? 0 : i + 1));
-  }
-
   return (
     <main className={styles.main}>
       <Link href={"/projects"} className={styles.back}>
@@ -68,15 +56,16 @@ export default function Portfolio() {
         </section>
 
         <aside className={styles.carousel}>
-          <button className={styles.nav} onClick={prev}>
-            <ChevronLeft size={18} />
-          </button>
-
-          <div className={styles.placeholder} />
-
-          <button className={styles.nav} onClick={next}>
-            <ChevronRight size={18} />
-          </button>
+          <div className={styles.placeholder}>
+            <Image
+              width={1200}
+              height={800}
+              className={styles.image}
+              src="/portolio-pic.png"
+              alt="portolio-pic"
+              priority
+            />
+          </div>
         </aside>
       </div>
     </main>

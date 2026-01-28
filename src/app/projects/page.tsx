@@ -14,9 +14,8 @@ export default function Projects() {
           <article className={styles.card}>
             <h3 className={styles.cardTitle}>Orbit Bank</h3>
             <p className={styles.cardDescription}>
-              Aplicação mobile bancária digital com foco em arquitetura limpa,
-              performance e experiência do usuário. APIs próprias e front-end
-              moderno.
+              Aplicação mobile bancária digital com interface responsiva e
+              moderna.
             </p>
             <span className={styles.cardStack}>
               React Native · TypeScript · Node.js · Prisma ORM · MongoDB
