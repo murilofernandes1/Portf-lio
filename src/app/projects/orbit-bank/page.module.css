@@ -14,21 +14,31 @@
   color: rgba(255, 255, 255, 0.4);
   font-size: 14px;
   font-weight: 500;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-decoration: none;
   transition: all 0.2s ease;
-}
-
-.back:hover {
-  color: #fff;
-  transform: translateX(-4px);
 }
 
 .layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  align-items: flex-start;
   gap: 80px;
+  margin-top: 0;
+}
+
+.bigname {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: #fff;
+  margin-top: 0;
+}
+
+.back:hover {
+  color: #fff;
+  transform: translateX(-4px);
 }
 
 @keyframes fadeUp {

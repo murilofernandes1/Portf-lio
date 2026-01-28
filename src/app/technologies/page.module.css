@@ -72,11 +72,25 @@
   transition:
     transform 0.25s ease,
     background 0.25s ease;
+  overflow: hidden;
+}
+
+.card img {
+  width: 32px;
+  height: 32px;
+  filter: grayscale(1) brightness(1.5);
+  transition: all 0.3s ease;
+  object-fit: contain;
 }
 
 .techItem:hover .card {
   transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.08);
+}
+
+.techItem:hover .card img {
+  filter: grayscale(0) brightness(1);
+  transform: scale(1.1);
 }
 
 .label {
@@ -127,6 +141,11 @@
     border-radius: 12px;
   }
 
+  .card img {
+    width: 26px;
+    height: 26px;
+  }
+
   .label {
     font-size: 12px;
     margin-top: 8px;
@@ -156,6 +175,11 @@
     width: 50px;
     height: 50px;
     border-radius: 10px;
+  }
+
+  .card img {
+    width: 22px;
+    height: 22px;
   }
 
   .label {
