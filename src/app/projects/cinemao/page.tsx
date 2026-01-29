@@ -35,6 +35,14 @@ export default function Cinemao() {
             />
             <img
               alt=""
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            />
+            <img
+              alt=""
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+            />
+            <img
+              alt=""
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
             />
             <img

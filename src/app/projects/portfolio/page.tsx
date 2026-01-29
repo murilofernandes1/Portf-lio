@@ -36,6 +36,15 @@ export default function Portfolio() {
               alt=""
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
             />
+            <img
+              alt=""
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            />
+
+            <img
+              alt=""
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+            />
           </div>
 
           <div className={styles.actions}>

@@ -37,6 +37,10 @@ export default function OrbitBank() {
             />
             <img
               alt=""
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            />
+            <img
+              alt=""
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
             />
             <img
